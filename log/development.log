@@ -1642,3 +1642,30 @@ Processing by PostsController#body as HTML
   [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
   Rendered text template (0.0ms)
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1/body" for ::1 at 2019-09-16 15:45:24 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#body as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 19ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2019-09-16 15:45:26 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.0ms)
+  Rendered posts/_post.html.erb (0.0ms)
+  Rendered posts/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 163ms (Views: 162.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/2/body" for ::1 at 2019-09-16 15:45:28 -0600
+Processing by PostsController#body as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms)
